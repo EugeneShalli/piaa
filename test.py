@@ -17,8 +17,8 @@ def test_adding(file_in='1_1.in', file_out='1_1.out'):
     print(answer == right_answer)
 
 
-# Test Insertion
-def test_binary_search(file_in='2_5.in', file_out='2_5.out'):
+# Test bin search
+def test_binary_search(file_in='2_1.in', file_out='2_1.out'):
     with open(file_in, 'r') as f_in:
         with open(file_out, 'r') as f_out:
             num_add = int(f_in.readline())
@@ -37,7 +37,7 @@ def test_binary_search(file_in='2_5.in', file_out='2_5.out'):
     print(answer == right_answer)
 
 
-# Test Insertion
+# Test bin search in answer
 def test_binary_search_on_answer(file_in='3_1.in', file_out='3_1.out'):
     with open(file_in, 'r') as f_in:
         with open(file_out, 'r') as f_out:
@@ -50,14 +50,6 @@ def test_binary_search_on_answer(file_in='3_1.in', file_out='3_1.out'):
             big_arr = BigArr(arr)
             answer = big_arr.binary_search_on_answer(k, 0, big_arr.arr[n-1])
             print(answer)
-            # answer = []
-            # right_answer = []
-            # # print(arr)
-            # for i in tqdm(range(k)):
-            #     el = int(f_in.readline())
-            #     big_arr = BigArr(arr)
-            #     right_answer.append(int(f_out.readline()))
-            #     answer.append(big_arr.binary_search_on_answer(0, len(arr) - 1, el))
 
 
 if __name__ == "__main__":

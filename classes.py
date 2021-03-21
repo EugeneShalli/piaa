@@ -54,35 +54,12 @@ class BigArr:
         return count
 
     def binary_search_on_answer(self, K, left, right):
-        # left = 0
-        # right = len(self.arr)
-        # N = len(self.arr)
-        # if right - left >= 1:
         if right > left:
-            # middle = left + (right - left) // 2
             middle = (left + right) // 2
-            # if self.good(middle, N) >= K:
-            #     return self.binary_search_on_answer(K, left, middle)
-            #     # return self.arr[middle]
-            # elif self.good(middle, N) < K:
-            #     return self.binary_search_on_answer(K, middle, right)
             if self.good(middle) > K:
                 return self.binary_search_on_answer(K, middle+1, right)
                 # return self.arr[middle]
             elif self.good(middle) <= K:
                 return self.binary_search_on_answer(K, left, middle)
-            # else:
-            #     return self.binary_search_on_answer(K, left, middle)
         else:
             return right
-            # else:
-                # return self.binary_search_on_answer(K, left, middle)
-
-
-        # while right - left > 1:
-        #     middle = (left + right) // 2
-        #     if self.good(middle):
-        #         right = middle
-        #     else:
-        #         left = middle
-
